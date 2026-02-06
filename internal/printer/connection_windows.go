@@ -18,6 +18,14 @@ var (
 	endPagePrinter    = winspool.NewProc("EndPagePrinter")
 	writePrinter      = winspool.NewProc("WritePrinter")
 	enumPrintersW     = winspool.NewProc("EnumPrintersW")
+	getPrinterW       = winspool.NewProc("GetPrinterW")
+)
+
+const (
+	printerStatusError        = 0x00000002
+	printerStatusOffline      = 0x00000080
+	printerStatusNotAvailable = 0x00001000
+	printerStatusMask         = printerStatusError | printerStatusOffline | printerStatusNotAvailable
 )
 
 // docInfo1 mirrors the Windows DOC_INFO_1W structure.
@@ -111,19 +119,50 @@ func (sw *SpoolerWriter) Close() error {
 	return nil
 }
 
+// printerStatus queries the spooler for the printer's status flags
+// using GetPrinterW with PRINTER_INFO_6 (level 6), which returns
+// only the dwStatus DWORD.
+func printerStatus(handle uintptr) (uint32, error) {
+	var needed uint32
+	getPrinterW.Call(handle, 6, 0, 0, uintptr(unsafe.Pointer(&needed)))
+	if needed == 0 {
+		return 0, fmt.Errorf("nao foi possivel obter tamanho do buffer")
+	}
+
+	buf := make([]byte, needed)
+	r, _, e := getPrinterW.Call(
+		handle,
+		6,
+		uintptr(unsafe.Pointer(&buf[0])),
+		uintptr(needed),
+		uintptr(unsafe.Pointer(&needed)),
+	)
+	if r == 0 {
+		return 0, fmt.Errorf("consultar status da impressora: %w", e)
+	}
+
+	status := *(*uint32)(unsafe.Pointer(&buf[0]))
+	return status, nil
+}
+
 // Open opens a connection to a Windows printer via the Spooler API.
-// A test write of the ESC/POS init command detects offline printers,
-// since OpenPrinterW succeeds for any registered driver even without
-// a physical device.
+// After opening the spooler handle, it queries status flags to detect
+// offline or unavailable printers, since OpenPrinterW succeeds for any
+// registered driver even without a physical device.
 func Open(printerName string) (*Printer, error) {
 	sw, err := openSpooler(printerName)
 	if err != nil {
 		return nil, err
 	}
 
-	if _, err := sw.Write(CmdInit); err != nil {
+	status, err := printerStatus(sw.handle)
+	if err != nil {
 		sw.Close()
 		return nil, fmt.Errorf("impressora nao respondeu em %s: %w", printerName, err)
+	}
+	if status&printerStatusMask != 0 {
+		sw.Close()
+		return nil, fmt.Errorf("impressora %s offline ou indisponivel (status: 0x%X)", printerName, status)
 	}
 
 	return &Printer{device: sw, path: printerName}, nil
