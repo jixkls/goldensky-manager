@@ -20,8 +20,7 @@ func (a *App) buildOrderPanel() fyne.CanvasObject {
 			return len(a.order.Items)
 		},
 		func() fyne.CanvasObject {
-			qty := widget.NewLabel("0x")
-			name := widget.NewLabel("Item Name")
+			name := widget.NewLabel("0x Item Name")
 			name.Wrapping = fyne.TextTruncate
 			notes := widget.NewLabel("")
 			notes.TextStyle = fyne.TextStyle{Italic: true}
@@ -31,8 +30,9 @@ func (a *App) buildOrderPanel() fyne.CanvasObject {
 			minus := widget.NewButton("-", nil)
 			remove := widget.NewButton("X", nil)
 			editNotes := widget.NewButton("Obs", nil)
+			editNotes.Importance = widget.MediumImportance
 
-			controls := container.NewHBox(minus, qty, plus)
+			controls := container.NewHBox(minus, plus)
 			nameBlock := container.NewVBox(name, notes)
 			row := container.NewBorder(
 				nil, nil,
@@ -56,16 +56,14 @@ func (a *App) buildOrderPanel() fyne.CanvasObject {
 			nameLabel := nameBlock.Objects[0].(*widget.Label)
 			notesLabel := nameBlock.Objects[1].(*widget.Label)
 
-			qtyLabel := leftBox.Objects[1].(*widget.Label)
 			minusBtn := leftBox.Objects[0].(*widget.Button)
-			plusBtn := leftBox.Objects[2].(*widget.Button)
+			plusBtn := leftBox.Objects[1].(*widget.Button)
 
 			priceLabel := rightBox.Objects[0].(*widget.Label)
 			editNotesBtn := rightBox.Objects[1].(*widget.Button)
 			removeBtn := rightBox.Objects[2].(*widget.Button)
 
-			qtyLabel.SetText(fmt.Sprintf("%dx", orderItem.Quantity))
-			nameLabel.SetText(orderItem.Item.Name)
+			nameLabel.SetText(fmt.Sprintf("%dx %s", orderItem.Quantity, orderItem.Item.Name))
 			priceLabel.SetText(pos.FormatBRL(orderItem.Total()))
 
 			if orderItem.Notes != "" {

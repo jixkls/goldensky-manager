@@ -9,11 +9,18 @@ import (
 )
 
 // Open opens a connection to the printer at the given device path.
+// It sends an ESC/POS init command to verify the printer is physically present.
 func Open(devicePath string) (*Printer, error) {
 	f, err := os.OpenFile(devicePath, os.O_WRONLY, 0)
 	if err != nil {
 		return nil, fmt.Errorf("abrir impressora %s: %w", devicePath, err)
 	}
+
+	if _, err := f.Write(CmdInit); err != nil {
+		f.Close()
+		return nil, fmt.Errorf("impressora nao respondeu em %s: %w", devicePath, err)
+	}
+
 	return &Printer{device: f, path: devicePath}, nil
 }
 

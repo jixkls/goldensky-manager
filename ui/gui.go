@@ -1,7 +1,6 @@
 package ui
 
 import (
-	"fmt"
 	"log"
 	"strings"
 
@@ -161,23 +160,8 @@ func (a *App) newOrder() {
 }
 
 func (a *App) addItemToOrder(item pos.MenuItem) {
-	notesEntry := widget.NewMultiLineEntry()
-	notesEntry.SetPlaceHolder("Observacoes (opcional)")
-	notesEntry.SetMinRowsVisible(3)
-
-	content := container.NewVBox(
-		widget.NewLabel(fmt.Sprintf("%s - %s", item.Name, pos.FormatBRL(item.Price))),
-		notesEntry,
-	)
-
-	d := dialog.NewCustomConfirm("Adicionar Item", "Adicionar", "Cancelar", content, func(ok bool) {
-		if !ok {
-			return
-		}
-		a.order.AddItem(item, 1, strings.TrimSpace(notesEntry.Text))
-		a.refreshOrderDisplay()
-	}, a.mainWindow)
-	d.Show()
+	a.order.AddItem(item, 1, "")
+	a.refreshOrderDisplay()
 }
 
 func (a *App) showEditNotesDialog(index int) {
