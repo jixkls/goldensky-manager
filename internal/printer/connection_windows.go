@@ -112,11 +112,20 @@ func (sw *SpoolerWriter) Close() error {
 }
 
 // Open opens a connection to a Windows printer via the Spooler API.
+// A test write of the ESC/POS init command detects offline printers,
+// since OpenPrinterW succeeds for any registered driver even without
+// a physical device.
 func Open(printerName string) (*Printer, error) {
 	sw, err := openSpooler(printerName)
 	if err != nil {
 		return nil, err
 	}
+
+	if _, err := sw.Write(CmdInit); err != nil {
+		sw.Close()
+		return nil, fmt.Errorf("impressora nao respondeu em %s: %w", printerName, err)
+	}
+
 	return &Printer{device: sw, path: printerName}, nil
 }
 
