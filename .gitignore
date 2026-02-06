@@ -1,0 +1,7 @@
+# Compiled binaries
+goldensky-pos
+goldensky-pos.exe
+*.zip
+
+# Data files
+*.csv

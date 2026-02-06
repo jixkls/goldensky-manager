@@ -1,0 +1,529 @@
+{
+  "items": [
+    {
+      "id": 1,
+      "name": "Portuguesa",
+      "price": 5300,
+      "category": "Pizzas Tradicionais",
+      "active": true
+    },
+    {
+      "id": 2,
+      "name": "4 Queijos",
+      "price": 5300,
+      "category": "Pizzas Tradicionais",
+      "active": true
+    },
+    {
+      "id": 3,
+      "name": "Frango com Catupiry",
+      "price": 5300,
+      "category": "Pizzas Tradicionais",
+      "active": true
+    },
+    {
+      "id": 4,
+      "name": "Baiana",
+      "price": 5300,
+      "category": "Pizzas Tradicionais",
+      "active": true
+    },
+    {
+      "id": 5,
+      "name": "Lombo",
+      "price": 5300,
+      "category": "Pizzas Tradicionais",
+      "active": true
+    },
+    {
+      "id": 6,
+      "name": "Palmito",
+      "price": 5300,
+      "category": "Pizzas Tradicionais",
+      "active": true
+    },
+    {
+      "id": 7,
+      "name": "Calabresa",
+      "price": 5300,
+      "category": "Pizzas Tradicionais",
+      "active": true
+    },
+    {
+      "id": 8,
+      "name": "Bacon",
+      "price": 5300,
+      "category": "Pizzas Tradicionais",
+      "active": true
+    },
+    {
+      "id": 9,
+      "name": "Moda da Casa",
+      "price": 5900,
+      "category": "Pizzas Tradicionais",
+      "active": true
+    },
+    {
+      "id": 10,
+      "name": "Vegetariana",
+      "price": 5300,
+      "category": "Pizzas Tradicionais",
+      "active": true
+    },
+    {
+      "id": 11,
+      "name": "Strogonoff de Carne",
+      "price": 5900,
+      "category": "Pizzas Tradicionais",
+      "active": true
+    },
+    {
+      "id": 12,
+      "name": "Strogonoff de Frango",
+      "price": 5900,
+      "category": "Pizzas Tradicionais",
+      "active": true
+    },
+    {
+      "id": 13,
+      "name": "Frango Especial",
+      "price": 5900,
+      "category": "Pizzas Tradicionais",
+      "active": true
+    },
+    {
+      "id": 14,
+      "name": "Calacatu com Bacon",
+      "price": 5900,
+      "category": "Pizzas Tradicionais",
+      "active": true
+    },
+    {
+      "id": 15,
+      "name": "Sensação",
+      "price": 5900,
+      "category": "Pizzas Doces",
+      "active": true
+    },
+    {
+      "id": 16,
+      "name": "Paçoquinha",
+      "price": 5300,
+      "category": "Pizzas Doces",
+      "active": true
+    },
+    {
+      "id": 17,
+      "name": "Ouro Branco",
+      "price": 5900,
+      "category": "Pizzas Doces",
+      "active": true
+    },
+    {
+      "id": 18,
+      "name": "Romeu e Julieta",
+      "price": 5300,
+      "category": "Pizzas Doces",
+      "active": true
+    },
+    {
+      "id": 19,
+      "name": "Ceviche",
+      "price": 5500,
+      "category": "Porções",
+      "active": true
+    },
+    {
+      "id": 20,
+      "name": "Batata Frita",
+      "price": 2500,
+      "category": "Porções",
+      "active": true
+    },
+    {
+      "id": 21,
+      "name": "Batata Frita com Queijo e Bacon",
+      "price": 3000,
+      "category": "Porções",
+      "active": true
+    },
+    {
+      "id": 22,
+      "name": "Calabresa Acebolada",
+      "price": 3000,
+      "category": "Porções",
+      "active": true
+    },
+    {
+      "id": 23,
+      "name": "Coxinha da Asa",
+      "price": 3800,
+      "category": "Porções",
+      "active": true
+    },
+    {
+      "id": 24,
+      "name": "Mandioca Frita",
+      "price": 2000,
+      "category": "Porções",
+      "active": true
+    },
+    {
+      "id": 25,
+      "name": "Mandioca Frita com Queijo e Bacon",
+      "price": 2500,
+      "category": "Porções",
+      "active": true
+    },
+    {
+      "id": 26,
+      "name": "Polenta Frita",
+      "price": 2000,
+      "category": "Porções",
+      "active": true
+    },
+    {
+      "id": 27,
+      "name": "Filé de Tilápia",
+      "price": 4600,
+      "category": "Porções",
+      "active": true
+    },
+    {
+      "id": 28,
+      "name": "Filé de Frango",
+      "price": 3800,
+      "category": "Porções",
+      "active": true
+    },
+    {
+      "id": 29,
+      "name": "Alcatra Acebolada",
+      "price": 4800,
+      "category": "Porções",
+      "active": true
+    },
+    {
+      "id": 30,
+      "name": "Panceta",
+      "price": 4500,
+      "category": "Porções",
+      "active": true
+    },
+    {
+      "id": 31,
+      "name": "Tulipa de Frango",
+      "price": 4200,
+      "category": "Porções",
+      "active": true
+    },
+    {
+      "id": 32,
+      "name": "Tábua Grill",
+      "price": 12000,
+      "category": "Porções",
+      "active": true
+    },
+    {
+      "id": 33,
+      "name": "Bavaria Lata",
+      "price": 400,
+      "category": "Cervejas - Lata",
+      "active": true
+    },
+    {
+      "id": 34,
+      "name": "Antárctica Lata",
+      "price": 500,
+      "category": "Cervejas - Lata",
+      "active": true
+    },
+    {
+      "id": 35,
+      "name": "Skol Lata",
+      "price": 500,
+      "category": "Cervejas - Lata",
+      "active": true
+    },
+    {
+      "id": 36,
+      "name": "Brahma Lata",
+      "price": 500,
+      "category": "Cervejas - Lata",
+      "active": true
+    },
+    {
+      "id": 37,
+      "name": "Amstel Lata",
+      "price": 500,
+      "category": "Cervejas - Lata",
+      "active": true
+    },
+    {
+      "id": 38,
+      "name": "Original Lata",
+      "price": 500,
+      "category": "Cervejas - Lata",
+      "active": true
+    },
+    {
+      "id": 39,
+      "name": "Bella Roma Lata",
+      "price": 900,
+      "category": "Cervejas - Lata",
+      "active": true
+    },
+    {
+      "id": 40,
+      "name": "Skol",
+      "price": 600,
+      "category": "Cervejas - Litrinho",
+      "active": true
+    },
+    {
+      "id": 41,
+      "name": "Brahma",
+      "price": 500,
+      "category": "Cervejas - Litrinho",
+      "active": true
+    },
+    {
+      "id": 42,
+      "name": "Original",
+      "price": 500,
+      "category": "Cervejas - Litrinho",
+      "active": true
+    },
+    {
+      "id": 43,
+      "name": "Antárctica",
+      "price": 500,
+      "category": "Cervejas - Litrinho",
+      "active": true
+    },
+    {
+      "id": 44,
+      "name": "Sol Long Neck",
+      "price": 900,
+      "category": "Cervejas - Long Neck",
+      "active": true
+    },
+    {
+      "id": 45,
+      "name": "Sol Zero Long Neck",
+      "price": 800,
+      "category": "Cervejas - Long Neck",
+      "active": true
+    },
+    {
+      "id": 46,
+      "name": "Spaten Long Neck",
+      "price": 800,
+      "category": "Cervejas - Long Neck",
+      "active": true
+    },
+    {
+      "id": 47,
+      "name": "Stella Long Neck",
+      "price": 800,
+      "category": "Cervejas - Long Neck",
+      "active": true
+    },
+    {
+      "id": 48,
+      "name": "Heineken Long Neck",
+      "price": 800,
+      "category": "Cervejas - Long Neck",
+      "active": true
+    },
+    {
+      "id": 49,
+      "name": "Michelob Long Neck",
+      "price": 800,
+      "category": "Cervejas - Long Neck",
+      "active": true
+    },
+    {
+      "id": 50,
+      "name": "Corona Long Neck",
+      "price": 800,
+      "category": "Cervejas - Long Neck",
+      "active": true
+    },
+    {
+      "id": 51,
+      "name": "Antárctica",
+      "price": 1000,
+      "category": "Cervejas - Garrafa",
+      "active": true
+    },
+    {
+      "id": 52,
+      "name": "Skol",
+      "price": 1000,
+      "category": "Cervejas - Garrafa",
+      "active": true
+    },
+    {
+      "id": 53,
+      "name": "Brahma",
+      "price": 1000,
+      "category": "Cervejas - Garrafa",
+      "active": true
+    },
+    {
+      "id": 54,
+      "name": "Original",
+      "price": 1200,
+      "category": "Cervejas - Garrafa",
+      "active": true
+    },
+    {
+      "id": 55,
+      "name": "Eisenbahn",
+      "price": 850,
+      "category": "Cervejas - Garrafa",
+      "active": true
+    },
+    {
+      "id": 56,
+      "name": "Heineken",
+      "price": 1500,
+      "category": "Cervejas - Garrafa",
+      "active": true
+    },
+    {
+      "id": 57,
+      "name": "Amstel",
+      "price": 1000,
+      "category": "Cervejas - Garrafa",
+      "active": true
+    },
+    {
+      "id": 58,
+      "name": "Chopp Brahma",
+      "price": 1200,
+      "category": "Chopp",
+      "active": true
+    },
+    {
+      "id": 59,
+      "name": "Chopp Brahma",
+      "price": 1500,
+      "category": "Chopp",
+      "active": true
+    },
+    {
+      "id": 60,
+      "name": "Torre Chopp Brahma",
+      "price": 7000,
+      "category": "Chopp",
+      "active": true
+    },
+    {
+      "id": 61,
+      "name": "Torre Chopp Brahma",
+      "price": 10000,
+      "category": "Chopp",
+      "active": true
+    },
+    {
+      "id": 62,
+      "name": "Caipirinha",
+      "price": 1800,
+      "category": "Drinks",
+      "active": true
+    },
+    {
+      "id": 63,
+      "name": "Energético Monster",
+      "price": 1200,
+      "category": "Drinks",
+      "active": true
+    },
+    {
+      "id": 64,
+      "name": "Isotônico Powerade",
+      "price": 800,
+      "category": "Drinks",
+      "active": true
+    },
+    {
+      "id": 65,
+      "name": "Ice",
+      "price": 1000,
+      "category": "Drinks",
+      "active": true
+    },
+    {
+      "id": 66,
+      "name": "Suco Del Valle",
+      "price": 450,
+      "category": "Sucos",
+      "active": true
+    },
+    {
+      "id": 67,
+      "name": "Sunap",
+      "price": 700,
+      "category": "Sucos",
+      "active": true
+    },
+    {
+      "id": 68,
+      "name": "Sunap",
+      "price": 1400,
+      "category": "Sucos",
+      "active": true
+    },
+    {
+      "id": 69,
+      "name": "Água",
+      "price": 300,
+      "category": "Sucos",
+      "active": true
+    },
+    {
+      "id": 70,
+      "name": "Coca-Cola Mini",
+      "price": 350,
+      "category": "Refrigerantes",
+      "active": true
+    },
+    {
+      "id": 71,
+      "name": "Refrigerante Lata",
+      "price": 500,
+      "category": "Refrigerantes",
+      "active": true
+    },
+    {
+      "id": 72,
+      "name": "Refrigerante",
+      "price": 700,
+      "category": "Refrigerantes",
+      "active": true
+    },
+    {
+      "id": 73,
+      "name": "Coca-Cola",
+      "price": 800,
+      "category": "Refrigerantes",
+      "active": true
+    },
+    {
+      "id": 74,
+      "name": "Refrigerante",
+      "price": 1500,
+      "category": "Refrigerantes",
+      "active": true
+    },
+    {
+      "id": 75,
+      "name": "4 Queijos diferentona",
+      "price": 5300,
+      "category": "Pizzas Tradicionais",
+      "active": false
+    }
+  ]
+}

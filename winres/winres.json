@@ -1,0 +1,42 @@
+{
+  "RT_GROUP_ICON": {
+    "APP": {
+      "0000": ["icon256.png"]
+    }
+  },
+  "RT_MANIFEST": {
+    "#1": {
+      "0000": {
+        "identity": {
+          "name": "GoldenSky.POS",
+          "version": "1.0.0.0"
+        },
+        "description": "GoldenSky POS - Sistema de Ponto de Venda",
+        "minimum-os": "win7",
+        "execution-level": "asInvoker",
+        "dpi-awareness": "system"
+      }
+    }
+  },
+  "RT_VERSION": {
+    "#1": {
+      "0000": {
+        "fixed": {
+          "file_version": "1.0.0.0",
+          "product_version": "1.0.0.0"
+        },
+        "info": {
+          "0416": {
+            "CompanyName": "GoldenSky",
+            "FileDescription": "GoldenSky POS - Sistema de Ponto de Venda",
+            "FileVersion": "1.0.0.0",
+            "InternalName": "goldensky-pos",
+            "OriginalFilename": "goldensky-pos.exe",
+            "ProductName": "GoldenSky POS",
+            "ProductVersion": "1.0.0.0"
+          }
+        }
+      }
+    }
+  }
+}
